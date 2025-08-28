@@ -16,8 +16,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="max-w[1920px]">
-    
+<body class="max-w[1920px] font-[inter]">
+    <header>
+        <nav class="h-[100px] flex justify-between items-center py-[25px] px-[60px]">
+            <div class="flex items-center gap-[10px] ">
+                <img class="w-[50px] h-[50px]" src="./assets/logo.png" alt="">
+                <h1 class="text-[#006747] font-black text-[18px]">Emergency <br>Service</h1>
+            </div>
+            <div class="flex gap-[20px] ">
+                <div id="heart-card" class="w-30 h-13 bg-[#41ff6b1a] rounded-[50px] flex justify-center items-center gap-[10px]">
+                    <p id="heartNumber" class="font-bold">0</p>
+                    <p>❤️</p>
+                </div>
+                <div id="coin-card" class="w-30 h-13 bg-[#41ff6b1a] rounded-[50px] flex justify-center items-center gap-[10px]">
+                    <p id="coinNumber" class="font-bold">100</p>
+                    <p>🪙</p>
+                </div>
+                <div id="copy-card" class="w-30 h-13 bg-[#00A63E] rounded-[50px] flex items-center">
+                    <p id="copyNumber" class="mx-auto text-white">2 Copy</p>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <script src="./script.js"></script>
 </body>
