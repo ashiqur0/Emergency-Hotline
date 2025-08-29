@@ -56,3 +56,8 @@ document.getElementById('call-btn-1').addEventListener('click', function () {
     }
 });
 
+// clear button functionality
+document.getElementById('clear-button').addEventListener('click', function() {
+    document.getElementById('history').innerText = '';
+    callHistory.length = 0;
+});
