@@ -109,10 +109,10 @@ for (const key in copyBtnId) {
 function copyButton(copyButton, callNumberID) {
     document.getElementById(copyButton).addEventListener('click', function() {
 
-        const callNumber = getNumber(callNumberID);
+        const callNumber = document.getElementById(callNumberID).innerText;
         const alertText = 'Number is copied ' + callNumber;
 
-        alert(alertText);
+        navigator.clipboard.writeText(callNumber).then(() => alert(alertText)).catch(e => alert('Failed to copy'));
 
         let copyCount = getNumber('copy-count');
         console.log(copyCount);
