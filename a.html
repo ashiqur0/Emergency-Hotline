@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Copy Example</title>
+</head>
+<body>
+  <div style="border:1px solid #ccc; padding:10px; max-width:300px;">
+    <p id="card-text">PREMIUM-25-OFF</p>
+    <button onclick="copyText()">Copy</button>
+  </div>
+
+  <script>
+    function copyText() {
+      // get the text from the element
+      const text = document.getElementById("card-text").innerText;
+      
+      // use Clipboard API
+      navigator.clipboard.writeText(text)
+        .then(() => alert("Copied: " + text))
+        .catch(err => alert("Failed to copy"));
+    }
+  </script>
+</body>
+</html>

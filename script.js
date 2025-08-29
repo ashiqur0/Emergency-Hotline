@@ -3,7 +3,7 @@ const callHistory = [];
 
 // Get Integer Number
 function getNumber(coinNumberID) {
-    return parseInt(document.getElementById(coinNumberID).innerText)
+    return parseInt(document.getElementById(coinNumberID).innerText);
 }
 
 // Call Button Functionality
@@ -88,3 +88,34 @@ document.getElementById('clear-button').addEventListener('click', function () {
     document.getElementById('history').innerText = '';
     callHistory.length = 0;
 });
+
+/** Copy Button Functionality */
+const copyBtnId = {
+    'copy-btn-1' : 'number-1',
+    'copy-btn-2' : 'number-2',
+    'copy-btn-3' : 'number-3',
+    'copy-btn-4' : 'number-4',
+    'copy-btn-5' : 'number-5',
+    'copy-btn-6' : 'number-6',
+    'copy-btn-7' : 'number-7',
+    'copy-btn-8' : 'number-8',
+    'copy-btn-9' : 'number-9'
+};
+
+for (const key in copyBtnId) {
+    copyButton(key, copyBtnId[key]);
+}
+
+function copyButton(copyButton, callNumberID) {
+    document.getElementById(copyButton).addEventListener('click', function() {
+
+        const callNumber = getNumber(callNumberID);
+        const alertText = 'Number is copied ' + callNumber;
+
+        alert(alertText);
+
+        let copyCount = getNumber('copy-count');
+        console.log(copyCount);
+        document.getElementById('copy-count').innerText = ++copyCount;        
+    });
+}
