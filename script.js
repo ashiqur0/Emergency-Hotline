@@ -45,12 +45,12 @@ function updateCallHistory(id) {
     for (const callH of callHistory) {
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="h-21 p-4 mb-2 rounded-xl flex justify-between items-center bg-gray-100">
+        <div class="h-16 p-4 mb-2 rounded-2xl flex justify-between items-center bg-gray-100">
             <div>
-                <h2 class="font-inter font-semibold text-[18px]">${callH.name}</h2>
-                <h3 class="text-gray-700 text-[18px]">${callH.number}</h3>
+                <h2 class="font-inter font-semibold text-[.8rem]">${callH.name}</h2>
+                <h3 class="text-gray-700 text-[.8rem]">${callH.number}</h3>
             </div>
-            <p class="text-[#111111] text-[18px]">${callH.time}</p>
+            <p class="text-[#111111] text-[.8rem]">${callH.time}</p>
         </div>
         `
         history.appendChild(div);
