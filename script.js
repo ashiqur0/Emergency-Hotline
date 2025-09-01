@@ -115,7 +115,6 @@ function copyButton(copyButton, callNumberID) {
         navigator.clipboard.writeText(callNumber).then(() => alert(alertText)).catch(e => alert('Failed to copy'));
 
         let copyCount = getNumber('copy-count');
-        console.log(copyCount);
         document.getElementById('copy-count').innerText = ++copyCount;        
     });
 }
